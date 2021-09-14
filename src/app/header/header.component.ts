@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  
+  dateTime: Date = new Date();
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dateTime = new Date();
   }
 
 }
