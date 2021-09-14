@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewChild } from '@angular/core';
 import { City } from '../City';
 import { CITIES } from '../mock-cities';
 
@@ -14,7 +13,7 @@ export class StartComponent implements OnInit {
 
   cities = CITIES;
 
- selectedCity? : City;
+ selectedCity! : City;
 
   getWeather(city: City): void {
     this.selectedCity = city;

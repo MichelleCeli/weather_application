@@ -10,17 +10,9 @@
 <button id="Madrid-btn" class="city-btn" (click)="getWeather(cities[5])">Madrid</button> 
 </div>
 
-<div>
+<app-weather-details [city]="selectedCity"></app-weather-details>
 
-<div id="detail-container" *ngIf="selectedCity">
-<h1>{{selectedCity.name}}</h1>
-    
-    <h2>Today</h2>
-    <div>
-      <label><h2>{{selectedCity.temperature}}°</h2></label>
-    </div>
-  
-  </div>
+
 
 
 <!-- 
