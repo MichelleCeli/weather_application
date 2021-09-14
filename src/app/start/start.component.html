@@ -1,14 +1,11 @@
-
-
 <h1>How is the weather today?</h1>
-
 
 <div></div>
 
 <div id="city-container">
+
 <button id="Amsterdam-btn" class="city-btn">
   <a routerLink="/weather-city/{{cities[0].id}}">Amsterdam</a></button>
- 
 
 <button id="London-btn" class="city-btn">
   <a routerLink="/weather-city/{{cities[1].id}}">London</a></button>
@@ -25,19 +22,3 @@
 <button id="Madrid-btn" class="city-btn">
   <a routerLink="/weather-city/{{cities[5].id}}">Madrid</a></button>
 </div>
-
-
- <!-- <app-weather-details [city]="selectedCity"></app-weather-details>  -->
-
- <!-- <button id="Amsterdam-btn" class="city-btn" (click)="getWeather(cities[0])" >
-  <a routerLink="/weather-city/{{selectedCity.id}}">Amsterdam</a></button>
- -->
-
-
-<!-- 
-<div id="searchContainer" *ngIf="display" >
-    <div id="searchLoc">
-        <input type="search" id="searchInputField" value="" placeholder="search">
-    </div>
-    <button id="search"></button>
-    </div> -->

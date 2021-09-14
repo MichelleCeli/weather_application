@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { City } from '../City';
-import { CITIES } from '../mock-cities';
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -15,15 +14,6 @@ export class StartComponent implements OnInit {
   cities: City[] = [];
 
   selectedCity! : City;
-
-
-
-
-  /* getWeather(city: City): void {
-    this.selectedCity = city;
-    console.log(this.selectedCity.name);
-  }  */
-
   
   ngOnInit(): void {
     this.getCities();

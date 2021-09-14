@@ -12,7 +12,6 @@ import { WeatherService } from '../weather.service';
 export class WeatherDetailsComponent implements OnInit {
 
   city: City | undefined;
-  /* @Input() city?: City; */
 
   constructor(
     private route: ActivatedRoute,
@@ -31,5 +30,9 @@ export class WeatherDetailsComponent implements OnInit {
       .subscribe(city => this.city = city);
     
   } 
+
+  goBack(): void {
+    this.location.back();
+  }
 
 }

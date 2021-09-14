@@ -8,10 +8,6 @@ import { Observable, of } from 'rxjs';
 })
 export class WeatherService {
 
-  /* getCities(): City[] {
-    return CITIES;
-  } */
-
   getCities(): Observable<City[]> {
     const cities = of(CITIES);
     return cities;
