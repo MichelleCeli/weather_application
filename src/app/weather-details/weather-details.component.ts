@@ -13,14 +13,23 @@ export class WeatherDetailsComponent implements OnInit {
 
   city: City | undefined;
 
+  weatherData:any;
+
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private weatherService: WeatherService
-  ) { }
+  ) {
+    /* this.weatherService.getData().subscribe(data=>{
+      console.warn(data)
+    }) */
+   }
 
   ngOnInit(): void {
      this.getCity(); 
+     this.weatherService.getData().subscribe(data=>{
+      console.warn(data)
+    })
   }
 
    getCity(): void {
@@ -33,6 +42,10 @@ export class WeatherDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  getWeatherData(){
+
   }
 
 }

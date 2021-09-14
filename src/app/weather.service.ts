@@ -3,6 +3,8 @@ import { City } from './City';
 import { CITIES } from './mock-cities';
 import { Observable, of } from 'rxjs';
 
+import { HttpClient } from '@angular/common/http'; 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +22,11 @@ export class WeatherService {
      return of(city); 
   }
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  private weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&appid=9a37335f66eb41615baaf5c92ee3ba90';
+  getData()
+  {
+    return this.http.get(this.weatherUrl);
+  }
 }
