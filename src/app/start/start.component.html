@@ -1,5 +1,20 @@
 <h1>How is the weather today?</h1>
 <div></div>
-<!-- <button id="find-location">Find location</button> -->
-<input type="button" value="" id="search-bttn">
 
+<div id="city-container">
+<button id="Amsterdam-btn" class="city-btn" (click)="getSearchbar()" >Amsterdam</button>
+<button id="London-btn" class="city-btn" (click)="getSearchbar()" >London</button>
+<button id="Berlin-btn" class="city-btn" (click)="getSearchbar()" >Berlin</button>
+<button id="Tokyo-btn" class="city-btn" (click)="getSearchbar()" >Tokyo</button>
+<button id="Paris-btn" class="city-btn" (click)="getSearchbar()" >Paris</button>
+<button id="Madrid-btn" class="city-btn" (click)="getSearchbar()">Madrid</button>
+</div>
+
+
+<!-- 
+<div id="searchContainer" *ngIf="display" >
+    <div id="searchLoc">
+        <input type="search" id="searchInputField" value="" placeholder="search">
+    </div>
+    <button id="search"></button>
+    </div> -->

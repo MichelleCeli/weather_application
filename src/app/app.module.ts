@@ -8,12 +8,13 @@ import { MainComponent } from './main/main.component';
 import { StartComponent } from './start/start.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    StartComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

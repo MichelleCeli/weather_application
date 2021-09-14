@@ -1,14 +1,28 @@
-#search-bttn {
-    width: 20%;
-    height: 2em;
+input:focus{
+    outline: none;
+}
+
+#city-container{
+    display: grid;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+   height: 88vh; 
+    grid-template-columns: [first] 20% [second] 20% [third] 20%;
+    grid-template-rows: [row1] 30% [row2] 30%;
+    row-gap: 10%;
+    column-gap: 10%;
+}
+.city-btn {
+  /*   width: 20%;
+    height: 2em; */
     font-family: objektiv-mk2, sans-serif;
     font-weight: 400;
     font-style: normal;
-    height: 79.8px;
-    width: 456.8px;
-    background: url(../../assets/btn-find-loc.png);
-    background-position: center;
-    border: none;
-    font-size: 2em;
+    
+   /*  background: url(../../assets/btn-find-loc.png); */
+   
     /* background-image: url(.../assets/button.png); */
 }
+

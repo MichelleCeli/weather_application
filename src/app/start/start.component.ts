@@ -10,9 +10,20 @@ export class StartComponent implements OnInit {
 
   constructor() { }
 
- /*  getSearchBar(): void {
+  display = false;
+  clicked = false;
+
+  getSearchbar(): void {
+    /* if(!this.clicked){
     console.log("searchbar opens");
-  } */
+    this.display = true;
+    this.clicked = true;
+    }else{
+      this.display = false;
+      this.clicked = false;
+    }
+ */
+  } 
 
   ngOnInit(): void {
   }
