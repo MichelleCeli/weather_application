@@ -2,13 +2,25 @@
 <div></div>
 
 <div id="city-container">
-<button id="Amsterdam-btn" class="city-btn" (click)="getSearchbar()" >Amsterdam</button>
-<button id="London-btn" class="city-btn" (click)="getSearchbar()" >London</button>
-<button id="Berlin-btn" class="city-btn" (click)="getSearchbar()" >Berlin</button>
-<button id="Tokyo-btn" class="city-btn" (click)="getSearchbar()" >Tokyo</button>
-<button id="Paris-btn" class="city-btn" (click)="getSearchbar()" >Paris</button>
-<button id="Madrid-btn" class="city-btn" (click)="getSearchbar()">Madrid</button>
+<button id="Amsterdam-btn" class="city-btn" (click)="getWeather(cities[0])">Amsterdam</button>
+ <button id="London-btn" class="city-btn" (click)="getWeather(cities[1])">London</button>
+<button id="Berlin-btn" class="city-btn" (click)="getWeather(cities[2])">Berlin</button>
+<button id="Tokyo-btn" class="city-btn" (click)="getWeather(cities[3])">Tokyo</button>
+<button id="Paris-btn" class="city-btn" (click)="getWeather(cities[4])">Paris</button>
+<button id="Madrid-btn" class="city-btn" (click)="getWeather(cities[5])">Madrid</button> 
 </div>
+
+<div>
+
+<div id="detail-container" *ngIf="selectedCity">
+<h1>{{selectedCity.name}}</h1>
+    
+    <h2>Today</h2>
+    <div>
+      <label><h2>{{selectedCity.temperature}}°</h2></label>
+    </div>
+  
+  </div>
 
 
 <!-- 

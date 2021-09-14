@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { StartComponent } from './start/start.component';
+import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 
 
@@ -14,7 +15,8 @@ import { StartComponent } from './start/start.component';
     AppComponent,
     HeaderComponent,
     MainComponent,
-    StartComponent
+    StartComponent,
+    WeatherDetailsComponent
   ],
   imports: [
     BrowserModule,

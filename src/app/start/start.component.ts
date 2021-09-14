@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
+import { City } from '../City';
+import { CITIES } from '../mock-cities';
 
 @Component({
   selector: 'app-start',
@@ -10,21 +12,15 @@ export class StartComponent implements OnInit {
 
   constructor() { }
 
-  display = false;
-  clicked = false;
+  cities = CITIES;
 
-  getSearchbar(): void {
-    /* if(!this.clicked){
-    console.log("searchbar opens");
-    this.display = true;
-    this.clicked = true;
-    }else{
-      this.display = false;
-      this.clicked = false;
-    }
- */
+ selectedCity? : City;
+
+  getWeather(city: City): void {
+    this.selectedCity = city;
   } 
 
+  
   ngOnInit(): void {
   }
 
