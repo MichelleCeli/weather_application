@@ -1,16 +1,24 @@
+
+
 <h1>How is the weather today?</h1>
+
+
 <div></div>
 
 <div id="city-container">
-<button id="Amsterdam-btn" class="city-btn" (click)="getWeather(cities[0])">Amsterdam</button>
- <button id="London-btn" class="city-btn" (click)="getWeather(cities[1])">London</button>
+<button id="Amsterdam-btn" class="city-btn" (click)="getWeather(cities[0])" >
+  <a routerLink="/weather-city/{{selectedCity.name}}">Amsterdam</a></button>
+ 
+
+<button id="London-btn" class="city-btn" (click)="getWeather(cities[1])">London</button>
 <button id="Berlin-btn" class="city-btn" (click)="getWeather(cities[2])">Berlin</button>
 <button id="Tokyo-btn" class="city-btn" (click)="getWeather(cities[3])">Tokyo</button>
 <button id="Paris-btn" class="city-btn" (click)="getWeather(cities[4])">Paris</button>
 <button id="Madrid-btn" class="city-btn" (click)="getWeather(cities[5])">Madrid</button> 
 </div>
 
-<app-weather-details [city]="selectedCity"></app-weather-details>
+
+ <!-- <app-weather-details [city]="selectedCity"></app-weather-details>  -->
 
 
 
