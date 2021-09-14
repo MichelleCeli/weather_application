@@ -6,21 +6,32 @@
 <div></div>
 
 <div id="city-container">
-<button id="Amsterdam-btn" class="city-btn" (click)="getWeather(cities[0])" >
-  <a routerLink="/weather-city/{{selectedCity.name}}">Amsterdam</a></button>
+<button id="Amsterdam-btn" class="city-btn">
+  <a routerLink="/weather-city/{{cities[0].id}}">Amsterdam</a></button>
  
 
-<button id="London-btn" class="city-btn" (click)="getWeather(cities[1])">London</button>
-<button id="Berlin-btn" class="city-btn" (click)="getWeather(cities[2])">Berlin</button>
-<button id="Tokyo-btn" class="city-btn" (click)="getWeather(cities[3])">Tokyo</button>
-<button id="Paris-btn" class="city-btn" (click)="getWeather(cities[4])">Paris</button>
-<button id="Madrid-btn" class="city-btn" (click)="getWeather(cities[5])">Madrid</button> 
+<button id="London-btn" class="city-btn">
+  <a routerLink="/weather-city/{{cities[1].id}}">London</a></button>
+  
+<button id="Berlin-btn" class="city-btn">
+  <a routerLink="/weather-city/{{cities[2].id}}">Berlin</a></button>
+
+<button id="Tokyo-btn" class="city-btn">
+  <a routerLink="/weather-city/{{cities[3].id}}">Tokyo</a></button>
+
+<button id="Paris-btn" class="city-btn">
+  <a routerLink="/weather-city/{{cities[4].id}}">Paris</a></button>
+
+<button id="Madrid-btn" class="city-btn">
+  <a routerLink="/weather-city/{{cities[5].id}}">Madrid</a></button>
 </div>
 
 
  <!-- <app-weather-details [city]="selectedCity"></app-weather-details>  -->
 
-
+ <!-- <button id="Amsterdam-btn" class="city-btn" (click)="getWeather(cities[0])" >
+  <a routerLink="/weather-city/{{selectedCity.id}}">Amsterdam</a></button>
+ -->
 
 
 <!-- 

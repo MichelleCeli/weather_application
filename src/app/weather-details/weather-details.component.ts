@@ -11,7 +11,8 @@ import { WeatherService } from '../weather.service';
 })
 export class WeatherDetailsComponent implements OnInit {
 
-  @Input() city?: City;
+  city: City | undefined;
+  /* @Input() city?: City; */
 
   constructor(
     private route: ActivatedRoute,
@@ -20,13 +21,15 @@ export class WeatherDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    /* this.getCity(); */
+     this.getCity(); 
   }
 
-  /* getCity(): void {
-    const name = this.route.snapshot.paramMap.get('name');
-    this.weatherService.getCity(name)
-      .subscribe((city: City | undefined) => this.city = city);
-  } */
+   getCity(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    
+    this.weatherService.getCity(id)
+      .subscribe(city => this.city = city);
+    
+  } 
 
 }

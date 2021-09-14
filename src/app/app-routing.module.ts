@@ -4,7 +4,7 @@ import { StartComponent } from './start/start.component';
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 const routes: Routes = [
-  {path: 'weather-city/:name', component: WeatherDetailsComponent},
+  {path: 'weather-city/:id', component: WeatherDetailsComponent},
   {path: 'start', component: StartComponent},
   {path: '', redirectTo: '/start', pathMatch: 'full'}
 ];

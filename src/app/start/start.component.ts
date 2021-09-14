@@ -12,28 +12,26 @@ export class StartComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) { }
 
- /*  cities = CITIES; */
-
   cities: City[] = [];
 
- selectedCity! : City;
-
-getCities(): void {
- /*  this.cities = this.weatherService.getCities(); */
-
-  this.weatherService.getCities()
-      .subscribe(cities => this.cities = cities);
-}
+  selectedCity! : City;
 
 
-  getWeather(city: City): void {
+
+
+  /* getWeather(city: City): void {
     this.selectedCity = city;
     console.log(this.selectedCity.name);
-  } 
+  }  */
 
   
   ngOnInit(): void {
     this.getCities();
+  }
+
+  getCities(): void {
+    this.weatherService.getCities()
+        .subscribe(cities => this.cities = cities);
   }
 
 }

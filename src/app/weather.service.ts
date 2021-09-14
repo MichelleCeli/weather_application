@@ -17,12 +17,11 @@ export class WeatherService {
     return cities;
   }
 
-  getCity(name: string): City {
+  getCity(id: number): Observable<City> {
    
-    const city = CITIES.find(c => c.name === name)!;
+    const city = CITIES.find(c => c.id === id)!;
    
-    return city;
-    /* return of(city); */
+     return of(city); 
   }
 
   constructor() { }
