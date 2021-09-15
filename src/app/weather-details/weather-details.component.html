@@ -1,11 +1,14 @@
 <div id="detail-container" *ngIf="city">
 
+  <h1>{{city.name}}</h1>
+
   <div id="weather-info">
-    <h1>{{city.name}}</h1>
-        
+      <div>
         <h2>Today</h2>
-        <div>
-          <label><h2>{{cityTemp}}°C</h2></label>
+      </div>
+
+      <div>
+          <h1>{{cityTemp}}°C</h1>
         </div>
 
   </div>

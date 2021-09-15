@@ -4,15 +4,34 @@ h1, h2, h3 {
     font-style: normal;
     color: white;
     text-align: center;
+   /*  margin: 0.5em; */
 }
 #detail-container{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-center;
+}
+
+#weather-info{
+    height: 320px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background: url(../../assets/details.png);
+    background-position: center;
+    h1 {
+        margin: 0;
+    }
 }
 
 #back-btn{
     height: 80px;
     width: 320px;
+    padding-top: 0.5%;
+    margin-bottom: 2%;
 }
