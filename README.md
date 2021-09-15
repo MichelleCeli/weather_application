@@ -1,3 +1,7 @@
+This is a tiny (short and simple) weather-application. You can choose a city and the application will show you the current temperature at the location.
+
+It is my first Project working with Angular.
+
 # Angularapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
