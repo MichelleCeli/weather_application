@@ -25,9 +25,11 @@ export class WeatherService {
 
   constructor(private http:HttpClient) { }
 
-  private weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&appid=9a37335f66eb41615baaf5c92ee3ba90';
-  getData(): Observable<WeatherData[]>
+ 
+  getData(city: string): Observable<WeatherData[]>
   {
-    return this.http.get<WeatherData[]>(this.weatherUrl);
+   /*  let weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + 'Amsterdam' + '&appid=9a37335f66eb41615baaf5c92ee3ba90'; */
+    let weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=9a37335f66eb41615baaf5c92ee3ba90';
+    return this.http.get<WeatherData[]>(weatherUrl);
   }
 }

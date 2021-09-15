@@ -34,17 +34,19 @@ export class WeatherDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.getCity(); 
-     this.getWeatherData();
-    /*  this.weatherData = this.weatherService.getData().subscribe(data=>{console.warn(data)})
-     console.log("value?: " + this.weatherData.coord); */
+     /* this.getCity();  */
+     this.getWeatherData(this.getCity() );
   }
 
-   getCity(): void {
+   getCity(): string {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     
     this.weatherService.getCity(id)
       .subscribe(city => this.city = city);
+
+      console.log(this.city);
+
+      return this.city!.name;
     
   } 
 
@@ -52,8 +54,8 @@ export class WeatherDetailsComponent implements OnInit {
     this.location.back();
   }
 
-  getWeatherData(){
-    this.weatherService.getData().subscribe((weatherData: any)=>{
+  getWeatherData(city: string){
+    this.weatherService.getData(city).subscribe((weatherData: any)=>{
         this.weatherData = weatherData.main.temp;  
         console.log(this.weatherData);
     
