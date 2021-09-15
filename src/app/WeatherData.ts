@@ -5,6 +5,7 @@ export class WeatherData{
         city: "No City",
         conditions: "-",
         temperature: 0,
+        main: "",
         icon: ""
       }
 }
