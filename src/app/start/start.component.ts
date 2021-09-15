@@ -12,8 +12,6 @@ export class StartComponent implements OnInit {
   constructor(private weatherService: WeatherService) { }
 
   cities: City[] = [];
-
-  selectedCity! : City;
   
   ngOnInit(): void {
     this.getCities();

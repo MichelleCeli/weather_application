@@ -3,13 +3,6 @@ import { City } from '../City';
 import { ActivatedRoute } from '@angular/router';
 import { Location, LocationChangeListener, NgIf } from '@angular/common';
 import { WeatherService } from '../weather.service';
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
-
-import { map } from 'rxjs/operators';
-
-import { WeatherData } from '../WeatherData';
-
-import { Weather } from 'src/Weather';
 
 @Component({
   selector: 'app-weather-details',
@@ -23,17 +16,13 @@ export class WeatherDetailsComponent implements OnInit {
   cityTemp: number = 5;
   cityDescr: string = "";
 
-
-   data=[];
-   weatherData: any[]=[];
+  weatherData: any[]=[];
   
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private weatherService: WeatherService
-  ) {
-     
-  }
+  ) {  }
 
   ngOnInit(): void {
      this.getWeatherData(this.getCity() );
@@ -44,11 +33,7 @@ export class WeatherDetailsComponent implements OnInit {
     
     this.weatherService.getCity(id)
       .subscribe(city => this.city = city);
-
-      console.log(this.city);
-
       return this.city!;
-    
   } 
 
   goBack(): void {
@@ -59,11 +44,7 @@ export class WeatherDetailsComponent implements OnInit {
     this.weatherService.getData(city.name).subscribe((weatherData: any)=>{
         this.cityTemp = weatherData.main.temp - 273.15;
         this.cityTemp = Math.round((this.cityTemp + Number.EPSILON) * 100) / 100
-
-    
    })
  }
-
-  
 
 }

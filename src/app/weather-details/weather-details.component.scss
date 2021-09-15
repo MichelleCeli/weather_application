@@ -4,7 +4,6 @@ h1, h2, h3 {
     font-style: normal;
     color: white;
     text-align: center;
-   /*  margin: 0.5em; */
 }
 #detail-container{
     height: 88vh;
@@ -22,11 +21,13 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: url(../../assets/details.png);
+    background: url(../../assets/details_new.png);
     background-position: center;
     h1 {
         margin: 0;
+        color: #025373;
     }
+   
 }
 
 #back-btn{
